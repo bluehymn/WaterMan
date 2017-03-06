@@ -1,2 +1,2 @@
 # water_system
-It watering plants automatically according to weather forecast on time
+It water plants automatically according to weather forecast on time
