@@ -1,0 +1,22 @@
+{
+  "name": "water-system-server",
+  "version": "1.0.0",
+  "description": "nodejs server",
+  "main": "index.js",
+  "repository": "https://github.com/bluehymn/water_system",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bluehymn",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.17.0",
+    "eslint-config-standard": "^7.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1"
+  },
+  "dependencies": {
+    "mongodb": "^2.2.24",
+    "node-schedule": "^1.2.0"
+  }
+}
