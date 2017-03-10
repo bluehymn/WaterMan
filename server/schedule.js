@@ -17,7 +17,3 @@ exports.creatRule = function (data, callback) {
   rules.push(sch)
   // sch.job.cancel()
 }
-
-
-
-
