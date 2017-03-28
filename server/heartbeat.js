@@ -12,7 +12,6 @@ exports.start = function () {
       let acknowledge = false
       // 发送心跳包
       const client = net.createConnection({port: config.mcuPort, host: config.mcuAddress}, () => {
-        console.log('connected to server!')
         identifier = identifier ? --identifier : 8
         client.write('W+HEART:' + identifier)
         // 2s后无应答 记录应答失败到数据库

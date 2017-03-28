@@ -10,9 +10,16 @@ exports.interpret = function (command, socket) {
   console.log(cName)
   switch (cName) {
     case 'END':
-      if (cValue === 'true') {
-        socket.write('OK')
-      }
+      socket.write('OK')
+      MongoClient.connect(config.url, function (err, db) {
+        test.equal(null, err)
+        let time = new Date()
+        let pipes = db.collection('pipes')
+        pipes.updateMany({pipe: {$exists: true}}, {$set:{humidity: 1, update: time}})
+        .then(function (r) {
+          db.close()
+        })
+      })
       break
     case 'HEART':
       MongoClient.connect(config.url, function (err, db) {

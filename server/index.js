@@ -5,8 +5,11 @@ const heartbeat = require('./heartbeat')
 const tcpServer = require('./tcp-server.js')
 const httpServer = require('./http-server.js')
 
-tcpServer.start()
-schedule.creatRule({hour: 14, minute: 36}, () => {
-  weather.get()
+schedule.creatRule({hour: 16, minute: 43}, () => {
+  
 })
-heartbeat.start()
+
+weather.get()
+tcpServer.start()
+httpServer.start()
+// heartbeat.start()

@@ -3,10 +3,10 @@ const comInter = require('./command-interpreter')
 const config = require('./config.js')
 
 tcpServer.on('listening', function () {
-  console.log('Server is listening on port', config.server.tcpPort)
+  console.log('TCPServer is listening on port', config.server.tcpPort)
 })
 tcpServer.on('connection', function (socket) {
-  console.log('log: Server has a new connection')
+  console.log('tcp from ' + socket.address().address)
   socket.on('data', function (data) {
     data = data.toString()
     this.setEncoding('utf8')

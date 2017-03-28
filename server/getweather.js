@@ -32,4 +32,3 @@ exports.get = function () {
     })
   })
 }
-
